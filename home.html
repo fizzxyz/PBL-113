@@ -37,8 +37,8 @@
             line-height: 0;
         }
         .no-line-spacing {
-        line-height: 0.75;
-        display: inline-block; 
+            line-height: 0.75;
+            display: inline-block; 
         }
         .tombol{
             font-family: 'Lexend',sans-serif;
@@ -47,7 +47,7 @@
             background-color: #F7F6F6;
             padding: 30px 30px 30px 30px; 
             font-weight: 600;
-            transition: background-color 0.15s, color 0.15s,box-shadow 0.15s;
+            transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
         }
         .tombol:hover{
             background-color: #000000;
@@ -57,12 +57,31 @@
         .tombol:active{
             opacity: 0.5;
         }
+        .black-background {
+            background-color: #000;
+            height: 500px;
+            margin-top: 180px;
+        }
+        /* Responsif untuk perangkat dengan layar kecil */
+        @media (max-width: 768px) {
+            .text-utama {
+                margin-left: 10px;
+                margin-top: 50px;
+            }
+            .tombol {
+                padding: 20px;
+                font-size: 16px;
+            }
+            .navbar-nav .nav-link {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar">
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
     <!-- Logo di Sebelah Kiri -->
     <a class="navbar-brand" href="#">
         <img src="logo.png" alt="Logo"> <!-- Menggunakan logo.png sebagai logo -->
@@ -107,6 +126,11 @@
     <a href="login.html">
         <button class="tombol">PILIH SEKARANG</button>
     </a>
+</div>
+
+<!-- Background Hytam -->
+<div class="black-background"></div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
