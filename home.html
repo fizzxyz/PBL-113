@@ -3,135 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructor of the Month</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Olympvote Login</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Lexend', sans-serif;
-            background-color: #bfbfbf;
-            background-image: url('background.png');
-            background-size: 95%;
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        .custom-navbar {
-            background-color: #808080; /* Warna abu-abu untuk latar navbar */
-            font-family: 'Lexend', sans-serif;
+        .full-screen {
+            display: flex;
+            height: 100vh;
+            background-color: #d9d9d9;
         }
-        .navbar-brand img {
-            width: 40px;
-            height: 40px;
-        }
-        .navbar-nav .nav-link {
-            color: #000;
-            font-weight: bold;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #555; /* Efek hover */
-        }
-        .nav-item-right {
-            margin-left: auto;
-        }
-        .text-utama {
-            margin-top: 80px;
-            margin-left: 100px;
-            line-height: 0;
-        }
-        .no-line-spacing {
-            line-height: 0.75;
-            display: inline-block; 
-        }
-        .tombol{
-            font-family: 'Lexend',sans-serif;
-            border: none;
-            border-radius: 15px;
-            background-color: #F7F6F6;
-            padding: 30px 30px 30px 30px; 
-            font-weight: 600;
-            transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
-        }
-        .tombol:hover{
-            background-color: #000000;
+        .left-section {
+            flex: 1;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
-            box-shadow: 0 5px 10px rgba(0,0 ,0 , 0.5);
+            padding: 20px;
         }
-        .tombol:active{
-            opacity: 0.5;
+        .left-section form {
+            width: 100%;
+            max-width: 300px;
         }
-        .black-background {
-            background-color: #000;
-            height: 500px;
-            margin-top: 180px;
+        .right-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d9d9d9;
         }
-        /* Responsif untuk perangkat dengan layar kecil */
-        @media (max-width: 768px) {
-            .text-utama {
-                margin-left: 10px;
-                margin-top: 50px;
-            }
-            .tombol {
-                padding: 20px;
-                font-size: 16px;
-            }
-            .navbar-nav .nav-link {
-                font-size: 14px;
-            }
+        .logo {
+            text-align: center;
+            color: black;
+            font-family: 'Lexend';
+        }
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .btn-login {
+            background-color: black;
+            color: white;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .additional-links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: white;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <div class="full-screen">
+        <!-- Left Section for Login Form -->
+        <div class="left-section">
+            <form action="login.php" method="post">
+                <div class="text-center mb-4">
+                    <img src="logo.png" alt="Logo" style="width: 80px; height: 80px;">
+                </div>
+                <input type="text" name="nim" class="form-control bg-light text-dark" placeholder="NIM" required>
+                <input type="password" name="password" class="form-control bg-light text-dark" placeholder="KATA SANDI" required>
+                <button type="submit" class="btn btn-login mt-2">MASUK</button>
+                <div class="additional-links">
+                    <a href="#" class="text-white">Lupa kata sandi?</a>
+                    <a href="#" class="text-white">Belum ada akun?</a>
+                </div>
+            </form>
+        </div>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
-    <!-- Logo di Sebelah Kiri -->
-    <a class="navbar-brand" href="#">
-        <img src="logo.png" alt="Logo"> <!-- Menggunakan logo.png sebagai logo -->
-    </a>
-    
-    <!-- Tombol untuk Toggle pada tampilan mobile -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!-- Menu Navbar -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Acara</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Hasil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">SSD</a></li>
-        </ul>
-        
-        <!-- Masuk di Sebelah Kanan -->
-        <ul class="navbar-nav nav-item-right">
-            <li class="nav-item">
-                <a class="nav-link" href="login.html">
-                    Masuk
-                    <img src="https://img.icons8.com/material-outlined/24/000000/user--v1.png" alt="User Icon" style="margin-left: 5px;">
-                </a>
-            </li>
-        </ul>
+        <!-- Right Section for Logo -->
+        <div class="right-section">
+            <div class="logo">
+                <img src="logo.png" alt="Olympvote Logo" style="width: 150px;">
+                <h1 class="mt-3">OLYMPVOTE</h1>
+            </div>
+        </div>
     </div>
-</nav>
-
-<!-- LAMAN 1 -->
-<div class="col-md-4 text-utama">
-    <p style="font-family: 'Playfair Display'">SEDANG BERLANGSUNG</p>
-    <p class="display-4 fw-bold no-line-spacing">
-        <span style="font-size: 50px;">INSTRUCTOR</span>
-        <span style="font-size: 92px;">OF THE</span>
-        <span style="font-size: 90px;">MONTH</span>
-    </p>
-</div>
-<div class="offset-md-1">
-    <a href="login.html">
-        <button class="tombol">PILIH SEKARANG</button>
-    </a>
-</div>
-
-<!-- Background Hytam -->
-<div class="black-background"></div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
