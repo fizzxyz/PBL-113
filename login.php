@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validasi login
     if ($nim === $valid_nim && $password === $valid_password) {
         $_SESSION['nim'] = $nim;
-        header("Location: indexx.html"); // Redirect ke dashboard setelah login berhasil
+        header("Location: index.html"); // Redirect ke dashboard setelah login berhasil
         exit();
     } else {
         echo "<script>alert('NIM atau kata sandi salah'); window.location.href='login.html';</script>";
