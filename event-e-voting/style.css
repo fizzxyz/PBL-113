@@ -1,0 +1,136 @@
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+    margin: 0;
+}
+.navbar {
+    height: 80px;
+}
+
+.custom-navbar {
+    background-color: #808080;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-toggler-icon {
+    background-image: url('https://img.icons8.com/material-outlined/24/000000/menu.png');
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #555;
+}
+
+.jumbotron{
+    background-image: url('img/BACKGROUND.png');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    text-align: left;
+    padding-top: 20vh;
+    padding-bottom: 79vh;
+    padding-left: 5%;
+    line-height: 0;
+    margin-bottom: 0;
+}
+.teks-instructor{
+    margin-bottom: 10px;
+}
+.lebar-acara {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    /* justify-content: center; */ /* Center-align buttons */
+    gap: 20px; /* Add consistent spacing between buttons */
+    margin-top: 20px; /* Add spacing from text above */
+    width: 100%; /* Full width for responsiveness */
+}
+
+.acara-button {
+    font-family: 'Lexend', sans-serif;
+    border: none;
+    border-radius: 0px;
+    background-color: #d9d9d9;
+    padding: 50px 30px; /* Large padding for desktop view */
+    font-weight: 600;
+    transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
+    flex: 0 1 auto; /* Prevent flexible resizing on desktop */
+    max-width: 300px; /* Set a max-width to prevent overly large buttons */
+    text-align: center;
+}
+
+.acara-button:hover {
+    background-color: #000000;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.acara-button:active {
+    opacity: 0.9;
+    outline-color: white;
+    outline-style: solid;
+}
+/* Footer */
+.footer {
+    color: white;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+.footer-left ul li {
+    margin-bottom: 5px;
+}
+
+.footer-left a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    color: #ddd;
+}
+
+.button-footer {
+    border-radius: 10px;
+    background-color: black;
+    padding: 10px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    margin-right: 9px;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-brand img {
+        width: 30px;
+        height: 30px;
+    }
+    .jumbotron {
+        padding: 10px;
+    }
+    .acara-button {
+        padding: 20px; /* Maintain consistent padding */
+        font-size: 16px; /* Adjust font size for better readability */
+        flex: 1 1 100%; /* Buttons take up the full width in mobile */
+        max-width: 100%; /* Prevent shrinking below container width */
+        text-align: center; /* Ensure text is centered */
+        word-wrap: break-word; /* Handle longer text gracefully */
+    }
+    .lebar-acara {
+        gap: 15px; /* Slightly increase the gap for better spacing */
+    }
+}
