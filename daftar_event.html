@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .btn-primary {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .event-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .event-table th {
+            background-color: #f8f9fa;
+            text-align: left;
+            padding: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .event-table td {
+            padding: 12px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .event-row {
+            background-color: #f8f9fa;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-edit, .btn-delete {
+            padding: 4px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .btn-edit {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Daftar event</h1>
+            <button class="btn-primary">Buat Acara</button>
+        </div>
+        
+        <table class="event-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Judul</th>
+                    <th>Waktu Tersisa</th>
+                    <th>Opsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="event-row">
+                    <td>1</td>
+                    <td>Instruture of the Month October 2024</td>
+                    <td>02,23,29</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
