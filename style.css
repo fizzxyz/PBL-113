@@ -194,6 +194,12 @@ body {
     line-height: 1.4;
     margin: 0;
 }
+.about-page{
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 .button-footer {
     border-radius: 10px;
     background-color: black;
