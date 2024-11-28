@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Konfirmasi</title>
+    <style>
+        /* Gaya untuk latar belakang pop-up */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Gaya untuk jendela pop-up */
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .popup button.confirm {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .popup button.cancel {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="openPopup">Pilih</button>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <p>Apakah kamu yakin memilih ini?</p>
+            <button class="confirm" id="confirmButton">Ya</button>
+            <button class="cancel" id="cancelButton">Tidak</button>
+        </div>
+    </div>
+
+    <script>
+        // Ambil elemen DOM
+        const openPopupButton = document.getElementById('openPopup');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const confirmButton = document.getElementById('confirmButton');
+        const cancelButton = document.getElementById('cancelButton');
+
+        // Fungsi untuk membuka pop-up
+        openPopupButton.addEventListener('click', () => {
+            popupOverlay.style.display = 'block';
+        });
+
+        // Fungsi untuk menutup pop-up
+        cancelButton.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        // Tindakan jika klik "Ya"
+        confirmButton.addEventListener('click', () => {
+            alert('Kamu telah memilih!');
+            popupOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
